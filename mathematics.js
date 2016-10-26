@@ -19,3 +19,16 @@ function getGCD(a, b) {
 
     return gcd;
 }
+
+//Find the missing numbers
+function getMissingNumber(arr) {
+    var n = arr.length + 1,
+        sum = 0,
+        expectedSum = n * (n+1) / 2; //the formula for sum of a linear series of numbers is n * (n+1) / 2
+
+    for (var i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+
+    return expectedSum - sum;
+}
